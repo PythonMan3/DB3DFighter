@@ -173,7 +173,6 @@ def create_text_image(text, font, text_color, bk_color):
     height = 0
     for line in text.splitlines():
         draw.text((0, height), line, font=font, fill=text_color)
-        w, h = draw.textsize(line, font)
         _, _, w, h = draw.textbbox((0, 0), line, font)
         width = max(w, width)
         height += h
